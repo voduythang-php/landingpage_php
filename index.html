@@ -3,642 +3,727 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>PHUONG HONG PHAT KIEN GIANG CO., LTD</title>
+    <title>Công ty TNHH MTV Đầu tư Xây lắp Trường Giang</title>
     <meta
       name="description"
-      content="Landing page giới thiệu Công ty TNHH Phương Hồng Phát Kiên Giang - doanh nghiệp hoạt động trong lĩnh vực bán buôn thực phẩm."
+      content="Công ty TNHH Một thành viên Đầu tư Xây lắp Trường Giang - Chuyên xây dựng công trình điện, đầu tư & xây lắp hạ tầng điện tại Hà Nội và toàn quốc."
     />
-    <link rel="icon" href="favicon.ico" />
-
-    <!-- Tailwind CSS CDN -->
+    <!-- Tailwind CSS via CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
         theme: {
           extend: {
             colors: {
-              primary: "#facc15", // yellow-400
-              primaryDark: "#eab308", // yellow-500
-              primaryLight: "#fef3c7", // amber-100
-              dark: "#111827", // gray-900
+              primary: {
+                light: "#FDE68A", // yellow-200
+                DEFAULT: "#F59E0B", // amber-500
+                dark: "#EA580C", // orange-600
+              },
+              secondary: {
+                light: "#FEF3C7",
+                DEFAULT: "#F97316",
+                dark: "#C2410C",
+              },
+            },
+            fontFamily: {
+              sans: ["system-ui", "ui-sans-serif", "Segoe UI", "Roboto", "sans-serif"],
+            },
+            boxShadow: {
+              soft: "0 18px 45px rgba(0,0,0,0.08)",
             },
           },
         },
       };
     </script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
   </head>
+  <body class="font-sans text-slate-800 bg-gradient-to-b from-secondary-light to-white">
+    <!-- Header / Navbar -->
+    <header
+      class="sticky top-0 z-30 bg-white/90 backdrop-blur border-b border-yellow-100"
+    >
+      <div
+        class="max-w-6xl mx-auto flex items-center justify-between px-4 sm:px-6 py-3"
+      >
+        <a href="#top" class="flex items-center gap-2">
+          <div
+            class="h-9 w-9 rounded-lg bg-gradient-to-br from-primary to-secondary flex items-center justify-center shadow-soft"
+          >
+            <span class="text-white font-bold text-lg">TG</span>
+          </div>
+          <div class="leading-tight">
+            <p class="font-semibold text-sm sm:text-base">
+              CÔNG TY TNHH MTV ĐẦU TƯ XÂY LẮP TRƯỜNG GIANG
+            </p>
+            <p class="text-[11px] sm:text-xs text-slate-500">
+              TRUONG GIANG INVESTMENT CONSTRUCTION ONE MEMBER CO., LTD
+            </p>
+          </div>
+        </a>
 
-  <body class="bg-primaryLight text-dark antialiased">
-    <!-- Page Wrapper -->
-    <div class="min-h-screen flex flex-col">
-      <!-- Header / Navbar -->
-      <header
-        class="sticky top-0 z-30 bg-primary/90 backdrop-blur border-b border-yellow-200"
+        <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+          <a href="#about" class="hover:text-primary-dark transition-colors"
+            >Giới thiệu</a
+          >
+          <a href="#services" class="hover:text-primary-dark transition-colors"
+            >Dịch vụ</a
+          >
+          <a href="#projects" class="hover:text-primary-dark transition-colors"
+            >Dự án</a
+          >
+          <a href="#certificate" class="hover:text-primary-dark transition-colors"
+            >Chứng nhận</a
+          >
+          <a href="#contact" class="hover:text-primary-dark transition-colors"
+            >Liên hệ</a
+          >
+          <a
+            href="#contact"
+            class="inline-flex items-center gap-1 rounded-full bg-gradient-to-r from-primary to-secondary text-white px-4 py-2 shadow-soft hover:shadow-lg hover:brightness-105 transition-all"
+          >
+            <span>Nhận tư vấn</span>
+          </a>
+        </nav>
+
+        <button
+          id="menu-toggle"
+          class="md:hidden inline-flex items-center justify-center w-9 h-9 rounded-full border border-yellow-200 text-primary-dark bg-white shadow-sm"
+          aria-label="Toggle navigation"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile menu -->
+      <div
+        id="mobile-menu"
+        class="md:hidden max-h-0 overflow-hidden transition-all duration-300 bg-white/95 border-t border-yellow-100"
+      >
+        <nav class="px-4 pb-4 pt-2 space-y-2 text-sm font-medium">
+          <a href="#about" class="block py-1.5 hover:text-primary-dark">Giới thiệu</a>
+          <a href="#services" class="block py-1.5 hover:text-primary-dark">Dịch vụ</a>
+          <a href="#projects" class="block py-1.5 hover:text-primary-dark">Dự án</a>
+          <a href="#certificate" class="block py-1.5 hover:text-primary-dark"
+            >Chứng nhận</a
+          >
+          <a href="#contact" class="block py-1.5 hover:text-primary-dark">Liên hệ</a>
+          <a
+            href="#contact"
+            class="inline-flex mt-2 items-center justify-center w-full rounded-full bg-gradient-to-r from-primary to-secondary text-white px-4 py-2 shadow-soft"
+          >
+            Nhận tư vấn
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="top">
+      <!-- Hero -->
+      <section
+        class="relative overflow-hidden pt-14 pb-16 sm:pt-20 sm:pb-20 bg-gradient-to-br from-secondary-light via-white to-yellow-50"
       >
         <div
-          class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16"
-        >
-          <a href="#top" class="flex items-center space-x-3">
+          class="pointer-events-none absolute -left-32 -top-32 h-72 w-72 rounded-full bg-gradient-to-br from-primary/20 to-secondary/20 blur-3xl"
+        ></div>
+        <div
+          class="pointer-events-none absolute -right-40 top-10 h-80 w-80 rounded-full bg-gradient-to-tl from-secondary/10 to-primary/10 blur-3xl"
+        ></div>
+
+        <div class="relative max-w-6xl mx-auto px-4 sm:px-6 flex flex-col lg:flex-row gap-12">
+          <div class="flex-1 flex flex-col justify-center">
+            <span
+              class="inline-flex items-center gap-2 rounded-full bg-white/80 border border-yellow-200 px-3 py-1 text-xs font-semibold text-primary-dark shadow-sm w-fit mb-4"
+            >
+              <span class="h-1.5 w-1.5 rounded-full bg-primary-dark"></span>
+              Xây dựng công trình điện & hạ tầng năng lượng
+            </span>
+            <h1
+              class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900 mb-4"
+            >
+              Đối tác tin cậy trong
+              <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
+                xây lắp công trình điện
+              </span>
+            </h1>
+            <p class="text-sm sm:text-base text-slate-600 max-w-xl mb-6">
+              Công ty TNHH Một thành viên Đầu tư Xây lắp Trường Giang chuyên thi công xây dựng
+              công trình điện, lưới điện và hệ thống hạ tầng kỹ thuật, mang đến giải pháp an toàn,
+              bền vững cho các dự án tại Hà Nội và trên toàn quốc.
+            </p>
+            <div class="flex flex-wrap items-center gap-3 sm:gap-4 mb-6">
+              <a
+                href="#contact"
+                class="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-primary to-secondary text-white px-6 py-2.5 text-sm font-semibold shadow-soft hover:shadow-lg hover:translate-y-0.5 transition-all"
+              >
+                Nhận báo giá dự án
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" d="M9 5l7 7-7 7" />
+                </svg>
+              </a>
+              <a
+                href="#projects"
+                class="inline-flex items-center gap-2 rounded-full border border-yellow-300 bg-white/80 text-sm font-semibold px-5 py-2.5 text-slate-800 hover:border-secondary hover:text-secondary-dark transition-all"
+              >
+                Xem dự án tiêu biểu
+              </a>
+            </div>
+            <dl class="grid grid-cols-3 gap-3 sm:gap-4 text-xs sm:text-sm">
+              <div class="rounded-xl bg-white/80 border border-yellow-100 p-3 shadow-sm">
+                <dt class="text-slate-500">Năm thành lập</dt>
+                <dd class="font-semibold text-slate-900">2019</dd>
+              </div>
+              <div class="rounded-xl bg-white/80 border border-yellow-100 p-3 shadow-sm">
+                <dt class="text-slate-500">Lĩnh vực chính</dt>
+                <dd class="font-semibold text-slate-900">Xây dựng công trình điện</dd>
+              </div>
+              <div class="rounded-xl bg-white/80 border border-yellow-100 p-3 shadow-sm">
+                <dt class="text-slate-500">Trụ sở</dt>
+                <dd class="font-semibold text-slate-900">Hà Nội</dd>
+              </div>
+            </dl>
+          </div>
+
+          <!-- Hero card / mockup -->
+          <div class="flex-1 flex items-center justify-center">
             <div
-              class="h-9 w-9 rounded-full bg-white flex items-center justify-center shadow-md"
+              class="relative w-full max-w-md rounded-3xl bg-white border border-yellow-100 shadow-soft overflow-hidden"
             >
-              <span class="text-primaryDark font-extrabold text-lg">PHP</span>
+              <div class="p-5 border-b border-yellow-100 bg-gradient-to-r from-primary/5 to-secondary/5">
+                <p class="text-xs font-semibold text-primary-dark uppercase tracking-[0.18em] mb-1">
+                  Thông tin doanh nghiệp
+                </p>
+                <p class="text-sm font-semibold text-slate-900">
+                  CÔNG TY TNHH MTV ĐẦU TƯ XÂY LẮP TRƯỜNG GIANG
+                </p>
+                <p class="text-[11px] text-slate-500 mt-1">
+                  Mã số thuế: <span class="font-semibold text-slate-700">0108556339</span>
+                </p>
+              </div>
+              <div class="p-5 space-y-3 text-xs sm:text-sm">
+                <div class="flex items-start justify-between gap-4">
+                  <div class="space-y-1">
+                    <p class="text-slate-500">Địa chỉ:</p>
+                    <p class="font-medium text-slate-800">
+                      Số 23, TT 12 Khu đô thị mới Văn Phú,<br />
+                      Phường Kiến Hưng, Hà Đông, Hà Nội
+                    </p>
+                  </div>
+                  <span
+                    class="inline-flex items-center rounded-full bg-emerald-50 text-emerald-700 text-[11px] font-semibold px-2 py-0.5 border border-emerald-100"
+                  >
+                    Đang hoạt động
+                  </span>
+                </div>
+                <div class="grid grid-cols-2 gap-3">
+                  <div>
+                    <p class="text-slate-500">Người đại diện</p>
+                    <p class="font-semibold text-slate-800">Lưu Quốc Lập</p>
+                  </div>
+                  <div>
+                    <p class="text-slate-500">Cơ quan quản lý</p>
+                    <p class="font-semibold text-slate-800">
+                      Chi cục Thuế khu vực QL số 15 Hà Nội
+                    </p>
+                  </div>
+                </div>
+                <div class="mt-3 border-t border-dashed border-yellow-100 pt-3">
+                  <p class="text-[11px] text-slate-500 mb-1">
+                    Ngành nghề chính:
+                  </p>
+                  <p class="text-sm font-semibold text-slate-900">
+                    Xây dựng công trình điện & hạ tầng kỹ thuật.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="absolute -bottom-8 -right-10 h-28 w-28 rounded-full bg-gradient-to-tr from-primary/40 to-secondary/40 blur-2xl"
+              ></div>
             </div>
-            <div class="leading-tight">
-              <p class="text-xs font-semibold tracking-widest text-dark">
-                PHUONG HONG PHAT
-              </p>
-              <p class="text-sm font-bold">
-                KIEN GIANG CO., LTD
-              </p>
-            </div>
-          </a>
-
-          <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
-            <a href="#about" class="hover:text-primaryDark transition-colors"
-              >Giới thiệu</a
-            >
-            <a href="#services" class="hover:text-primaryDark transition-colors"
-              >Ngành nghề</a
-            >
-            <a href="#why-us" class="hover:text-primaryDark transition-colors"
-              >Lý do chọn</a
-            >
-            <a href="#contact" class="hover:text-primaryDark transition-colors"
-              >Liên hệ</a
-            >
-          </nav>
-
-          <div class="hidden md:flex items-center">
-            <a
-              href="tel:0899989996"
-              class="inline-flex items-center px-4 py-2 rounded-full bg-dark text-primaryLight text-sm font-semibold shadow hover:bg-primaryDark hover:text-dark transition-colors"
-            >
-              Gọi ngay: 0562036845
-            </a>
           </div>
         </div>
-      </header>
+      </section>
 
-      <!-- Main Content -->
-      <main id="top" class="flex-1">
-        <!-- Hero Section -->
-        <section
-          class="relative overflow-hidden bg-gradient-to-br from-primary to-primaryDark"
-        >
-          <div
-            class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24 grid lg:grid-cols-2 gap-12 items-center"
-          >
-            <div class="space-y-6 text-dark">
-              <span
-                class="inline-flex items-center px-3 py-1 rounded-full bg-white/80 text-xs font-semibold tracking-wide uppercase"
-              >
-                Doanh nghiệp bán buôn thực phẩm
-              </span>
-
-              <h1
-                class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight"
-              >
-                CÔNG TY TNHH
-                <span class="block text-dark">
-                  PHƯƠNG HỒNG PHÁT KIÊN GIANG
-                </span>
-              </h1>
-
-              <p class="text-base sm:text-lg text-dark/80 max-w-xl">
-                Đối tác tin cậy trong lĩnh vực
-                <span class="font-semibold">bán buôn thực phẩm</span>, cung cấp
-                sản phẩm an toàn, chất lượng cao cho hệ thống phân phối và đối
-                tác trên địa bàn tỉnh Kiên Giang và khu vực lân cận.
-              </p>
-
-              <dl class="grid grid-cols-2 gap-4 text-sm">
-                <div class="bg-white/80 rounded-2xl p-4 shadow-sm">
-                  <dt class="font-semibold text-xs uppercase tracking-wide">
-                    Mã số doanh nghiệp
-                  </dt>
-                  <dd class="mt-1 text-base font-bold">1702250235</dd>
-                </div>
-                <div class="bg-white/80 rounded-2xl p-4 shadow-sm">
-                  <dt class="font-semibold text-xs uppercase tracking-wide">
-                    Ngày thành lập
-                  </dt>
-                  <dd class="mt-1 text-base font-bold">11/03/2022</dd>
-                </div>
-              </dl>
-
-              <div class="flex flex-wrap items-center gap-4 pt-2">
-                <a
-                  href="#contact"
-                  class="inline-flex items-center px-6 py-3 rounded-full bg-dark text-primaryLight font-semibold text-sm shadow-lg hover:bg-primaryLight hover:text-dark transition-colors"
-                >
-                  Liên hệ hợp tác
-                </a>
-                <a
-                  href="#about"
-                  class="inline-flex items-center text-sm font-semibold text-dark hover:text-white/90"
-                >
-                  Tìm hiểu về chúng tôi
-                </a>
-              </div>
-            </div>
-
-            <!-- Hero Card -->
-            <div
-              class="relative bg-white/90 rounded-3xl shadow-2xl border border-yellow-200 px-6 py-6 sm:px-8 sm:py-8 space-y-4"
-            >
-              <div class="flex items-start justify-between gap-4">
-                <div>
-                  <p
-                    class="text-[11px] font-semibold tracking-[0.2em] uppercase text-gray-500"
-                  >
-                    GIẤY CHỨNG NHẬN ĐĂNG KÝ DOANH NGHIỆP
-                  </p>
-                  <p class="mt-1 text-sm font-bold">
-                    CÔNG TY TNHH PHƯƠNG HỒNG PHÁT KIÊN GIANG
-                  </p>
-                </div>
-                <span
-                  class="inline-flex items-center px-2.5 py-1 rounded-full bg-primaryLight text-[11px] font-semibold text-yellow-800"
-                >
-                  Đang hoạt động
-                </span>
-              </div>
-
-              <dl class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
-                <div class="space-y-1">
-                  <dt class="font-semibold text-gray-600">Địa chỉ trụ sở</dt>
-                  <dd class="text-gray-800">
-                    Tổ 6, ấp Tân Điền, Xã Giục Tượng, Huyện Châu Thành, Tỉnh
-                    Kiên Giang, Việt Nam
-                  </dd>
-                </div>
-                <div class="space-y-1">
-                  <dt class="font-semibold text-gray-600">Địa chỉ thuế</dt>
-                  <dd class="text-gray-800">
-                    Tổ 6, ấp Tân Điền, Xã Châu Thành, Tỉnh An Giang, Việt Nam
-                  </dd>
-                </div>
-                <div class="space-y-1">
-                  <dt class="font-semibold text-gray-600">Người đại diện</dt>
-                  <dd class="text-gray-800">
-                    Trần Thị Bé Phượng – Chủ tịch HĐTV kiêm Giám đốc
-                  </dd>
-                </div>
-                <div class="space-y-1">
-                  <dt class="font-semibold text-gray-600">Điện thoại</dt>
-                  <dd class="text-gray-800 font-semibold">0562036845</dd>
-                </div>
-              </dl>
-
-              <div
-                class="mt-2 pt-4 border-t border-dashed border-yellow-200 flex items-center justify-between gap-4"
-              >
-                <div class="text-[11px] text-gray-600">
-                  <p class="font-semibold uppercase tracking-widest">
-                    Ngành nghề chính
-                  </p>
-                  <p class="mt-0.5 text-gray-800">
-                    Bán buôn thực phẩm, phân phối đa kênh, dịch vụ hậu cần.
-                  </p>
-                </div>
-                <div
-                  class="shrink-0 w-16 h-16 rounded-full border-2 border-primaryDark/70 flex items-center justify-center text-[10px] text-center font-semibold text-yellow-800 bg-primaryLight"
-                >
-                  ĐĂNG KÝ<br />KINH DOANH
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- About Section -->
-        <section id="about" class="py-14 sm:py-16 lg:py-20">
-          <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid lg:grid-cols-2 gap-10 items-start">
-              <div class="space-y-4">
-                <h2 class="text-2xl sm:text-3xl font-extrabold text-dark">
-                  Về PHƯƠNG HỒNG PHÁT KIÊN GIANG
-                </h2>
-                <p class="text-sm sm:text-base text-gray-800 leading-relaxed">
-                  Công ty TNHH Phương Hồng Phát Kiên Giang là doanh nghiệp hoạt
-                  động trong lĩnh vực
-                  <span class="font-semibold">bán buôn thực phẩm</span>, được
-                  thành lập ngày 11/03/2022. Với đội ngũ lãnh đạo giàu kinh
-                  nghiệm và hệ thống phân phối linh hoạt, chúng tôi cam kết mang
-                  đến cho khách hàng những sản phẩm an toàn, đạt chuẩn và ổn
-                  định về nguồn cung.
-                </p>
-                <p class="text-sm sm:text-base text-gray-800 leading-relaxed">
-                  Chúng tôi định hướng phát triển bền vững, tuân thủ đầy đủ quy
-                  định pháp luật về an toàn thực phẩm, vệ sinh kho bãi và truy
-                  xuất nguồn gốc, đồng thời xây dựng mối quan hệ hợp tác lâu
-                  dài với các đối tác trong và ngoài tỉnh.
-                </p>
-
-                <dl
-                  class="mt-4 grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs sm:text-sm"
-                >
-                  <div class="bg-white rounded-2xl p-4 shadow-sm">
-                    <dt class="font-semibold text-gray-700">
-                      Vốn điều lệ
-                    </dt>
-                    <dd class="mt-1 text-base font-bold text-dark">
-                      5.000.000.000₫
-                    </dd>
-                  </div>
-                  <div class="bg-white rounded-2xl p-4 shadow-sm">
-                    <dt class="font-semibold text-gray-700">
-                      Loại hình DN
-                    </dt>
-                    <dd class="mt-1 text-gray-800">
-                      TNHH hai thành viên trở lên
-                    </dd>
-                  </div>
-                  <div class="bg-white rounded-2xl p-4 shadow-sm">
-                    <dt class="font-semibold text-gray-700">
-                      Quản lý bởi
-                    </dt>
-                    <dd class="mt-1 text-gray-800">
-                      Sở KH&amp;ĐT Tỉnh An Giang
-                    </dd>
-                  </div>
-                </dl>
-              </div>
-
-              <div
-                class="bg-white rounded-3xl shadow-xl border border-yellow-100 p-6 sm:p-8 space-y-6"
-              >
-                <h3 class="text-lg font-bold text-dark">
-                  Thông tin pháp lý chính
-                </h3>
-                <dl class="space-y-4 text-sm">
-                  <div class="flex gap-3">
-                    <dt class="w-32 shrink-0 font-semibold text-gray-600">
-                      Tên tiếng Việt
-                    </dt>
-                    <dd class="text-gray-900">
-                      CÔNG TY TRÁCH NHIỆM HỮU HẠN PHƯƠNG HỒNG PHÁT KIÊN GIANG
-                    </dd>
-                  </div>
-                  <div class="flex gap-3">
-                    <dt class="w-32 shrink-0 font-semibold text-gray-600">
-                      Tên quốc tế
-                    </dt>
-                    <dd class="text-gray-900">
-                      PHUONG HONG PHAT KIEN GIANG COMPANY LIMITED
-                    </dd>
-                  </div>
-                  <div class="flex gap-3">
-                    <dt class="w-32 shrink-0 font-semibold text-gray-600">
-                      Tên viết tắt
-                    </dt>
-                    <dd class="text-gray-900">PHP KIEN GIANG CO., LTD</dd>
-                  </div>
-                  <div class="flex gap-3">
-                    <dt class="w-32 shrink-0 font-semibold text-gray-600">
-                      Người đại diện
-                    </dt>
-                    <dd class="text-gray-900">
-                      Trần Thị Bé Phượng – Chủ tịch HĐTV kiêm Giám đốc
-                    </dd>
-                  </div>
-                  <div class="flex gap-3">
-                    <dt class="w-32 shrink-0 font-semibold text-gray-600">
-                      Địa chỉ liên lạc
-                    </dt>
-                    <dd class="text-gray-900">
-                      Khu phố Minh Long, Thị trấn Minh Lương, Huyện Châu
-                      Thành, Tỉnh Kiên Giang, Việt Nam
-                    </dd>
-                  </div>
-                </dl>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- Services / Industries Section -->
-        <section
-          id="services"
-          class="py-14 sm:py-16 lg:py-20 bg-gradient-to-br from-primaryLight to-white"
-        >
-          <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="max-w-3xl">
-              <h2 class="text-2xl sm:text-3xl font-extrabold text-dark">
-                Ngành nghề &amp; dịch vụ
+      <!-- About -->
+      <section id="about" class="py-14 sm:py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+          <div class="grid lg:grid-cols-[1.2fr,1fr] gap-10 items-start">
+            <div>
+              <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-3">
+                Về Trường Giang
               </h2>
-              <p class="mt-3 text-sm sm:text-base text-gray-800">
-                Chúng tôi tập trung vào chuỗi cung ứng thực phẩm an toàn, đảm
-                bảo chất lượng từ khâu lựa chọn nhà cung cấp đến giao hàng cho
-                khách hàng cuối.
+              <p class="text-sm sm:text-base text-slate-600 mb-4">
+                Với nền tảng vững chắc và đội ngũ kỹ sư, kỹ thuật viên giàu kinh nghiệm,
+                Trường Giang tập trung vào lĩnh vực xây dựng công trình điện, đường dây,
+                trạm biến áp và các hệ thống hạ tầng kỹ thuật liên quan.
+              </p>
+              <p class="text-sm sm:text-base text-slate-600 mb-5">
+                Chúng tôi cam kết mang đến giải pháp tối ưu với tiêu chuẩn an toàn cao,
+                tiến độ chính xác và chất lượng thi công bền vững cho mọi dự án.
+              </p>
+              <div class="grid sm:grid-cols-3 gap-3 sm:gap-4 text-xs sm:text-sm">
+                <div class="rounded-2xl border border-yellow-100 bg-gradient-to-br from-primary/5 to-white p-4">
+                  <p class="text-[11px] uppercase tracking-[0.18em] text-primary-dark font-semibold mb-1">
+                    Chất lượng
+                  </p>
+                  <p class="font-semibold text-slate-900 mb-1">Tiêu chuẩn cao</p>
+                  <p class="text-slate-600">
+                    Áp dụng quy trình quản lý và kiểm soát chất lượng chặt chẽ.
+                  </p>
+                </div>
+                <div class="rounded-2xl border border-yellow-100 bg-gradient-to-br from-secondary/5 to-white p-4">
+                  <p class="text-[11px] uppercase tracking-[0.18em] text-secondary-dark font-semibold mb-1">
+                    Tiến độ
+                  </p>
+                  <p class="font-semibold text-slate-900 mb-1">Đúng cam kết</p>
+                  <p class="text-slate-600">
+                    Lập kế hoạch chi tiết, chủ động nhân sự & thiết bị thi công.
+                  </p>
+                </div>
+                <div class="rounded-2xl border border-yellow-100 bg-gradient-to-br from-amber-50 to-white p-4">
+                  <p class="text-[11px] uppercase tracking-[0.18em] text-amber-700 font-semibold mb-1">
+                    An toàn
+                  </p>
+                  <p class="font-semibold text-slate-900 mb-1">Ưu tiên hàng đầu</p>
+                  <p class="text-slate-600">
+                    Tuân thủ nghiêm ngặt quy định an toàn lao động trong ngành điện.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="relative rounded-3xl border border-dashed border-yellow-200 bg-gradient-to-br from-secondary-light/60 via-white to-yellow-50 p-5 shadow-soft"
+            >
+              <p class="text-xs font-semibold text-primary-dark uppercase tracking-[0.25em] mb-2">
+                Thông tin pháp lý
+              </p>
+              <dl class="space-y-2 text-xs sm:text-sm">
+                <div class="flex gap-2">
+                  <dt class="w-28 text-slate-500">Mã số thuế</dt>
+                  <dd class="font-semibold text-slate-900">0108556339</dd>
+                </div>
+                <div class="flex gap-2">
+                  <dt class="w-28 text-slate-500">Ngày hoạt động</dt>
+                  <dd class="font-semibold text-slate-900">04/01/2019</dd>
+                </div>
+                <div class="flex gap-2">
+                  <dt class="w-28 text-slate-500">Địa chỉ</dt>
+                  <dd class="font-semibold text-slate-900">
+                    Số 23, TT 12 Khu đô thị mới Văn Phú, Phường Kiến Hưng, Hà Đông, Hà Nội
+                  </dd>
+                </div>
+                <div class="flex gap-2">
+                  <dt class="w-28 text-slate-500">Loại hình DN</dt>
+                  <dd class="font-semibold text-slate-900">
+                    Công ty trách nhiệm hữu hạn một thành viên
+                  </dd>
+                </div>
+              </dl>
+              <div
+                class="mt-5 inline-flex items-center gap-2 rounded-full bg-white/80 border border-yellow-200 px-3 py-1 text-[11px] font-medium text-slate-700"
+              >
+                <span class="h-1.5 w-1.5 rounded-full bg-emerald-500"></span>
+                Đang hoạt động - Được cấp phép bởi cơ quan thuế TP. Hà Nội
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services -->
+      <section
+        id="services"
+        class="py-14 sm:py-16 bg-gradient-to-b from-yellow-50 via-white to-secondary-light"
+      >
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+          <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-8">
+            <div>
+              <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-2">
+                Lĩnh vực hoạt động
+              </h2>
+              <p class="text-sm sm:text-base text-slate-600 max-w-xl">
+                Cung cấp dịch vụ trọn gói trong lĩnh vực xây dựng công trình điện, từ khảo sát,
+                thiết kế, thi công đến vận hành, bảo trì.
               </p>
             </div>
-
-            <div class="mt-8 grid gap-6 md:grid-cols-3">
-              <div
-                class="bg-white rounded-2xl shadow-sm border border-yellow-100 p-6 flex flex-col"
+            <div class="flex gap-2 text-[11px] sm:text-xs text-slate-500">
+              <span
+                class="inline-flex items-center rounded-full bg-white/80 border border-yellow-200 px-3 py-1 font-medium"
               >
-                <h3 class="text-base font-semibold text-dark">
-                  Bán buôn thực phẩm
-                </h3>
-                <p class="mt-2 text-sm text-gray-700 flex-1">
-                  Cung cấp đa dạng các mặt hàng thực phẩm khô, đông lạnh và
-                  chế biến cho siêu thị mini, nhà hàng, đại lý phân phối.
-                </p>
-                <ul class="mt-3 text-xs text-gray-700 space-y-1">
-                  <li>• Nguồn gốc rõ ràng, đầy đủ chứng từ</li>
-                  <li>• Bảo quản kho đạt chuẩn vệ sinh</li>
-                  <li>• Giá cạnh tranh, chiết khấu linh hoạt</li>
-                </ul>
-              </div>
-
-              <div
-                class="bg-white rounded-2xl shadow-sm border border-yellow-100 p-6 flex flex-col"
-              >
-                <h3 class="text-base font-semibold text-dark">
-                  Phân phối &amp; giao nhận
-                </h3>
-                <p class="mt-2 text-sm text-gray-700 flex-1">
-                  Tổ chức hệ thống giao hàng linh hoạt, đúng thời gian cam kết,
-                  tối ưu chi phí vận chuyển cho đối tác.
-                </p>
-                <ul class="mt-3 text-xs text-gray-700 space-y-1">
-                  <li>• Giao hàng trong ngày tại nội tỉnh</li>
-                  <li>• Kế hoạch giao nhận định kỳ</li>
-                  <li>• Hỗ trợ xử lý đơn hàng gấp</li>
-                </ul>
-              </div>
-
-              <div
-                class="bg-white rounded-2xl shadow-sm border border-yellow-100 p-6 flex flex-col"
-              >
-                <h3 class="text-base font-semibold text-dark">
-                  Hợp tác kinh doanh
-                </h3>
-                <p class="mt-2 text-sm text-gray-700 flex-1">
-                  Mở rộng hợp tác với nhà sản xuất, nhà cung cấp và đại lý phân
-                  phối trong và ngoài tỉnh theo mô hình win–win.
-                </p>
-                <ul class="mt-3 text-xs text-gray-700 space-y-1">
-                  <li>• Hợp đồng dài hạn ổn định</li>
-                  <li>• Chính sách thanh toán linh hoạt</li>
-                  <li>• Hỗ trợ phát triển thị trường địa phương</li>
-                </ul>
-              </div>
+                Tư vấn giải pháp kỹ thuật miễn phí
+              </span>
             </div>
           </div>
-        </section>
 
-        <!-- Why Us Section -->
-        <section id="why-us" class="py-14 sm:py-16 lg:py-20">
-          <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid lg:grid-cols-2 gap-10 items-center">
-              <div class="space-y-4">
-                <h2 class="text-2xl sm:text-3xl font-extrabold text-dark">
-                  Lý do đối tác chọn chúng tôi
-                </h2>
-                <p class="text-sm sm:text-base text-gray-800">
-                  Chúng tôi xây dựng uy tín dựa trên tính minh bạch, ổn định
-                  nguồn hàng và tinh thần đồng hành cùng khách hàng.
-                </p>
-
-                <ul class="mt-4 space-y-3 text-sm text-gray-800">
-                  <li class="flex items-start gap-3">
-                    <span
-                      class="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-primaryDark text-white text-xs font-bold"
-                    >
-                      1
-                    </span>
-                    <div>
-                      <p class="font-semibold">Pháp lý rõ ràng</p>
-                      <p class="text-gray-700">
-                        Doanh nghiệp được đăng ký và quản lý bởi cơ quan nhà
-                        nước, hồ sơ pháp lý minh bạch giúp đối tác yên tâm khi
-                        hợp tác lâu dài.
-                      </p>
-                    </div>
-                  </li>
-                  <li class="flex items-start gap-3">
-                    <span
-                      class="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-primaryDark text-white text-xs font-bold"
-                    >
-                      2
-                    </span>
-                    <div>
-                      <p class="font-semibold">Tập trung chất lượng</p>
-                      <p class="text-gray-700">
-                        Ưu tiên lựa chọn nhà cung cấp uy tín, quy trình kiểm
-                        soát hàng hóa chặt chẽ từ kho đến tay khách hàng.
-                      </p>
-                    </div>
-                  </li>
-                  <li class="flex items-start gap-3">
-                    <span
-                      class="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-primaryDark text-white text-xs font-bold"
-                    >
-                      3
-                    </span>
-                    <div>
-                      <p class="font-semibold">Hợp tác linh hoạt</p>
-                      <p class="text-gray-700">
-                        Chính sách giá và thanh toán phù hợp từng nhóm khách
-                        hàng, ưu tiên đồng hành và hỗ trợ phát triển thị trường
-                        cho đối tác.
-                      </p>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-
+          <div class="grid md:grid-cols-3 gap-5">
+            <article
+              class="group rounded-2xl bg-white border border-yellow-100 shadow-soft hover:shadow-lg hover:-translate-y-0.5 transition-all p-5"
+            >
               <div
-                class="bg-dark text-primaryLight rounded-3xl shadow-2xl p-6 sm:p-8 space-y-6"
+                class="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-primary to-secondary text-white"
               >
-                <h3 class="text-lg font-bold">Thông điệp từ doanh nghiệp</h3>
-                <p class="text-sm sm:text-base text-yellow-100 leading-relaxed">
-                  “Phương Hồng Phát Kiên Giang cam kết mang đến cho khách hàng
-                  những giải pháp cung ứng thực phẩm an toàn, ổn định và hiệu
-                  quả, trở thành đối tác đáng tin cậy trong hành trình phát
-                  triển bền vững của quý doanh nghiệp.”
-                </p>
-
-                <div
-                  class="pt-4 border-t border-yellow-500/40 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4"
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
                 >
-                  <div>
-                    <p class="text-xs uppercase tracking-widest text-yellow-300">
-                      Người đại diện theo pháp luật
-                    </p>
-                    <p class="text-sm font-semibold mt-1">
-                      Trần Thị Bé Phượng
-                    </p>
-                    <p class="text-xs text-yellow-200">
-                      Chủ tịch HĐTV kiêm Giám đốc
-                    </p>
-                  </div>
-                  <div
-                    class="rounded-2xl border border-dashed border-yellow-400 px-4 py-3 text-xs text-yellow-100"
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" d="M3 13h2l2 7h10l2-7h2M5 13l2-9h10l2 9M9 6h6" />
+                </svg>
+              </div>
+              <h3 class="font-semibold text-slate-900 mb-2">
+                Xây dựng công trình điện
+              </h3>
+              <p class="text-sm text-slate-600 mb-3">
+                Thi công đường dây & trạm biến áp trung thế, hạ thế; hệ thống chiếu sáng đô thị,
+                khu công nghiệp và khu đô thị mới.
+              </p>
+              <ul class="text-xs text-slate-600 space-y-1">
+                <li>• Đường dây trên không & cáp ngầm</li>
+                <li>• Trạm biến áp trọn gói</li>
+                <li>• Hệ thống tiếp địa & bảo vệ an toàn</li>
+              </ul>
+            </article>
+
+            <article
+              class="group rounded-2xl bg-white border border-yellow-100 shadow-soft hover:shadow-lg hover:-translate-y-0.5 transition-all p-5"
+            >
+              <div
+                class="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-secondary to-primary text-white"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M9 4h6l-1 7H10L9 4z" />
+                </svg>
+              </div>
+              <h3 class="font-semibold text-slate-900 mb-2">
+                Đầu tư & lắp đặt hạ tầng kỹ thuật
+              </h3>
+              <p class="text-sm text-slate-600 mb-3">
+                Tổng thầu hoặc nhà thầu phụ trong các dự án hạ tầng kỹ thuật điện, cấp thoát nước,
+                công trình dân dụng và công nghiệp.
+              </p>
+              <ul class="text-xs text-slate-600 space-y-1">
+                <li>• Hệ thống điện cho tòa nhà & nhà máy</li>
+                <li>• Hệ thống điều khiển & SCADA cơ bản</li>
+                <li>• Giải pháp tối ưu chi phí đầu tư</li>
+              </ul>
+            </article>
+
+            <article
+              class="group rounded-2xl bg-white border border-yellow-100 shadow-soft hover:shadow-lg hover:-translate-y-0.5 transition-all p-5"
+            >
+              <div
+                class="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-amber-400 to-orange-500 text-white"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" d="M9.75 3L8.5 7h3l-1.25 4M4 21h16" />
+                </svg>
+              </div>
+              <h3 class="font-semibold text-slate-900 mb-2">
+                Bảo trì & nâng cấp hệ thống
+              </h3>
+              <p class="text-sm text-slate-600 mb-3">
+                Dịch vụ bảo trì định kỳ, kiểm tra kỹ thuật, xử lý sự cố và nâng cấp hệ thống điện
+                hiện hữu cho doanh nghiệp.
+              </p>
+              <ul class="text-xs text-slate-600 space-y-1">
+                <li>• Kiểm tra, thí nghiệm thiết bị điện</li>
+                <li>• Cải tạo nâng cấp công suất</li>
+                <li>• Hỗ trợ 24/7 khi có sự cố</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects -->
+      <section id="projects" class="py-14 sm:py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+          <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-8">
+            <div>
+              <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-2">
+                Dự án tiêu biểu
+              </h2>
+              <p class="text-sm sm:text-base text-slate-600 max-w-xl">
+                Một số loại dự án Trường Giang đã và đang tham gia thực hiện.
+              </p>
+            </div>
+            <div class="text-xs sm:text-sm text-slate-500">
+              *Danh sách dưới đây mang tính minh họa, có thể thay bằng dự án thực tế.
+            </div>
+          </div>
+
+          <div class="grid md:grid-cols-3 gap-5 text-xs sm:text-sm">
+            <div class="rounded-2xl border border-yellow-100 bg-gradient-to-br from-secondary-light/70 to-white p-4">
+              <p class="font-semibold text-slate-900 mb-1">
+                Hệ thống điện khu đô thị mới
+              </p>
+              <p class="text-slate-600 mb-2">
+                Thi công đường dây, trạm biến áp và hệ thống chiếu sáng công cộng cho khu đô thị
+                tại Hà Nội.
+              </p>
+              <p class="text-[11px] text-slate-500">
+                Quy mô: trung thế 22kV, trạm biến áp 2x1000kVA.
+              </p>
+            </div>
+            <div class="rounded-2xl border border-yellow-100 bg-gradient-to-br from-yellow-50 to-white p-4">
+              <p class="font-semibold text-slate-900 mb-1">
+                Hệ thống điện nhà máy sản xuất
+              </p>
+              <p class="text-slate-600 mb-2">
+                Cung cấp & lắp đặt tủ điện, busway, hệ thống tiếp địa và chiếu sáng cho nhà máy
+                công nghiệp.
+              </p>
+              <p class="text-[11px] text-slate-500">
+                Đảm bảo vận hành 24/7, an toàn theo tiêu chuẩn hiện hành.
+              </p>
+            </div>
+            <div class="rounded-2xl border border-yellow-100 bg-gradient-to-br from-orange-50 to-white p-4">
+              <p class="font-semibold text-slate-900 mb-1">
+                Nâng cấp lưới điện khu dân cư
+              </p>
+              <p class="text-slate-600 mb-2">
+                Cải tạo, nâng cấp đường dây và tủ điện phân phối nhằm giảm tổn thất và tăng độ
+                tin cậy cung cấp điện.
+              </p>
+              <p class="text-[11px] text-slate-500">
+                Hoàn thành đúng tiến độ, hạn chế tối đa thời gian cắt điện.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Certificate -->
+      <section
+        id="certificate"
+        class="py-14 sm:py-16 bg-gradient-to-br from-secondary-light via-white to-yellow-50"
+      >
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+          <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-8">
+            <div>
+              <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-2">
+                Giấy chứng nhận đăng ký doanh nghiệp
+              </h2>
+              <p class="text-sm sm:text-base text-slate-600 max-w-xl">
+                Doanh nghiệp được cấp giấy chứng nhận đăng ký kinh doanh bởi cơ quan có thẩm
+                quyền, đảm bảo đầy đủ điều kiện pháp lý để hoạt động trong lĩnh vực xây lắp.
+              </p>
+            </div>
+            <div class="text-xs sm:text-sm text-slate-500">
+              Bạn có thể thay thế khu vực này bằng hình ảnh scan giấy phép thực tế.
+            </div>
+          </div>
+
+          <div
+            class="grid md:grid-cols-[1.1fr,1fr] gap-6 items-center rounded-3xl border border-dashed border-yellow-200 bg-white/80 p-5 sm:p-6 shadow-soft"
+          >
+            <div
+              class="aspect-[4/3] rounded-2xl bg-gradient-to-br from-yellow-100 via-white to-secondary-light flex items-center justify-center border border-yellow-100"
+            >
+              <div class="text-center px-4">
+                <div
+                  class="inline-flex items-center justify-center h-12 w-12 rounded-full bg-gradient-to-br from-primary to-secondary text-white mb-3"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
                   >
-                    <p class="font-semibold">Sẵn sàng hợp tác</p>
-                    <p class="mt-1">
-                      Liên hệ với chúng tôi để trao đổi chi tiết về nhu cầu
-                      cung ứng hàng hóa và cơ hội hợp tác hai bên.
-                    </p>
-                  </div>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" d="M9 12l2 2 4-4M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                  </svg>
                 </div>
+                <p class="font-semibold text-slate-900 mb-1">
+                  Khu vực hiển thị giấy phép / chứng nhận doanh nghiệp
+                </p>
+                <p class="text-xs sm:text-sm text-slate-600">
+                  Chèn ảnh scan giấy chứng nhận đăng ký doanh nghiệp để tăng độ tin cậy đối với đối
+                  tác và khách hàng.
+                </p>
               </div>
             </div>
+            <div class="space-y-3 text-xs sm:text-sm text-slate-700">
+              <p>
+                Thông tin trên giấy chứng nhận trùng khớp với dữ liệu đăng ký thuế, bao gồm:
+                tên doanh nghiệp, mã số thuế, địa chỉ trụ sở chính, người đại diện theo pháp luật
+                và ngành nghề kinh doanh chính.
+              </p>
+              <ul class="space-y-1">
+                <li>• Cơ quan cấp: Cơ quan đăng ký kinh doanh TP. Hà Nội</li>
+                <li>• Tình trạng: Đang hoạt động</li>
+                <li>• Ngành chính: Xây dựng công trình điện</li>
+              </ul>
+              <p class="text-xs text-slate-500">
+                *Để thay bằng ảnh thật, chỉ cần đặt file hình (ví dụ
+                <code class="bg-yellow-50 px-1 rounded border border-yellow-100 text-[11px]">certificate.jpg</code>)
+                và cập nhật đường dẫn trong phần này.
+              </p>
+            </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <!-- Contact Section -->
-        <section
-          id="contact"
-          class="py-14 sm:py-16 lg:py-20 bg-gradient-to-br from-primary to-primaryDark text-dark"
-        >
-          <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid lg:grid-cols-3 gap-10 items-start">
-              <div class="lg:col-span-2 space-y-4">
-                <h2 class="text-2xl sm:text-3xl font-extrabold">
-                  Liên hệ hợp tác &amp; đặt hàng
-                </h2>
-                <p class="text-sm sm:text-base text-dark/90 max-w-xl">
-                  Vui lòng liên hệ trực tiếp qua số điện thoại bên dưới hoặc
-                  gửi email để được tư vấn chi tiết về sản phẩm, bảng giá và mô
-                  hình hợp tác.
-                </p>
+      <!-- Contact -->
+      <section id="contact" class="py-14 sm:py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+          <div class="grid md:grid-cols-[1.1fr,1fr] gap-10 items-start">
+            <div>
+              <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-3">
+                Liên hệ hợp tác & tư vấn
+              </h2>
+              <p class="text-sm sm:text-base text-slate-600 mb-4">
+                Hãy để lại thông tin, chúng tôi sẽ chủ động liên hệ và tư vấn giải pháp phù hợp cho
+                dự án của bạn.
+              </p>
+              <ul class="text-sm text-slate-700 space-y-2 mb-6">
+                <li>
+                  <span class="font-semibold">Địa chỉ:</span>
+                  Số 23, TT 12 Khu đô thị mới Văn Phú, Phường Kiến Hưng, Hà Đông, Hà Nội
+                </li>
+                <li>
+                  <span class="font-semibold">Điện thoại:</span>
+                  <span class="text-slate-500 italic">0562036845</span>
+                </li>
+                <li>
+                  <span class="font-semibold">Email:</span>
+                  <span class="text-slate-500 italic">voduythang2951@gmail.com</span>
+                </li>
+              </ul>
+            </div>
 
-                <div
-                  class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-dark"
-                >
-                  <div class="bg-white/80 rounded-2xl p-4 shadow-sm">
-                    <p class="text-xs font-semibold uppercase tracking-widest">
-                      Điện thoại
-                    </p>
-                    <a
-                      href="tel:0899989996"
-                      class="mt-1 block text-lg font-extrabold"
-                    >
-                      0562036845
-                    </a>
-                    <p class="mt-1 text-xs text-gray-700">
-                      Thời gian làm việc: 8h00 – 17h00 (thứ 2 đến thứ 7)
-                    </p>
-                  </div>
-                  <div class="bg-white/80 rounded-2xl p-4 shadow-sm">
-                    <p class="text-xs font-semibold uppercase tracking-widest">
-                      Email
-                    </p>
-                    <p class="mt-1 text-sm font-semibold">
-                      voduythang2951@gmail.com
-                    </p>
-                    <p class="mt-1 text-xs text-gray-700">
-                      Vui lòng liên hệ qua điện thoại để được tư vấn nhanh nhất.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
-                  <div class="bg-white/80 rounded-2xl p-4 shadow-sm">
-                    <p class="text-xs font-semibold uppercase tracking-widest">
-                      Địa chỉ trụ sở chính
-                    </p>
-                    <p class="mt-1 font-semibold text-gray-900">
-                      Tổ 6, ấp Tân Điền, Xã Giục Tượng, Huyện Châu Thành, Tỉnh
-                      Kiên Giang, Việt Nam
-                    </p>
-                  </div>
-                  <div class="bg-white/80 rounded-2xl p-4 shadow-sm">
-                    <p class="text-xs font-semibold uppercase tracking-widest">
-                      Địa chỉ thuế
-                    </p>
-                    <p class="mt-1 font-semibold text-gray-900">
-                      Tổ 6, ấp Tân Điền, Xã Châu Thành, Tỉnh An Giang, Việt Nam
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Simple contact form (front-end only) -->
-              <div
-                class="bg-white rounded-3xl shadow-xl p-6 sm:p-7 space-y-4 text-sm text-gray-800"
-              >
-                <h3 class="text-lg font-bold text-dark">
-                  Gửi yêu cầu tư vấn
-                </h3>
-                <p class="text-xs text-gray-600">
-                  Biểu mẫu này chỉ là giao diện minh họa phía client. Bạn có thể
-                  tích hợp với dịch vụ form hoặc backend sau.
-                </p>
-                <form class="space-y-3">
+            <div
+              class="rounded-3xl border border-yellow-100 bg-gradient-to-br from-secondary-light via-white to-yellow-50 p-5 sm:p-6 shadow-soft"
+            >
+              <p class="text-sm font-semibold text-slate-900 mb-3">
+                Gửi yêu cầu nhanh
+              </p>
+              <form class="space-y-3 text-xs sm:text-sm">
+                <div class="grid sm:grid-cols-2 gap-3">
                   <div>
-                    <label class="block text-xs font-semibold text-gray-700">
-                      Họ và tên
-                    </label>
+                    <label class="block text-slate-600 mb-1" for="name">Họ và tên *</label>
                     <input
+                      id="name"
                       type="text"
-                      class="mt-1 block w-full rounded-xl border-gray-300 text-sm shadow-sm focus:border-primaryDark focus:ring-primaryDark"
+                      required
+                      class="w-full rounded-xl border border-yellow-200 bg-white/80 px-3 py-2 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-primary/60 focus:border-primary"
                       placeholder="Nhập họ tên của bạn"
                     />
                   </div>
                   <div>
-                    <label class="block text-xs font-semibold text-gray-700">
-                      Số điện thoại
-                    </label>
+                    <label class="block text-slate-600 mb-1" for="phone">Số điện thoại *</label>
                     <input
+                      id="phone"
                       type="tel"
-                      class="mt-1 block w-full rounded-xl border-gray-300 text-sm shadow-sm focus:border-primaryDark focus:ring-primaryDark"
+                      required
+                      class="w-full rounded-xl border border-yellow-200 bg-white/80 px-3 py-2 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-primary/60 focus:border-primary"
                       placeholder="Số điện thoại liên hệ"
                     />
                   </div>
-                  <div>
-                    <label class="block text-xs font-semibold text-gray-700">
-                      Nội dung
-                    </label>
-                    <textarea
-                      rows="3"
-                      class="mt-1 block w-full rounded-xl border-gray-300 text-sm shadow-sm focus:border-primaryDark focus:ring-primaryDark"
-                      placeholder="Mô tả nhu cầu hợp tác hoặc sản phẩm quan tâm"
-                    ></textarea>
-                  </div>
-                  <button
-                    type="button"
-                    class="w-full inline-flex justify-center items-center px-4 py-2.5 rounded-full bg-dark text-primaryLight font-semibold text-sm hover:bg-primaryDark hover:text-dark transition-colors"
+                </div>
+                <div>
+                  <label class="block text-slate-600 mb-1" for="email">Email</label>
+                  <input
+                    id="email"
+                    type="email"
+                    class="w-full rounded-xl border border-yellow-200 bg-white/80 px-3 py-2 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-primary/60 focus:border-primary"
+                    placeholder="Email (nếu có)"
+                  />
+                </div>
+                <div>
+                  <label class="block text-slate-600 mb-1" for="project">Nội dung dự án</label>
+                  <textarea
+                    id="project"
+                    rows="3"
+                    class="w-full rounded-xl border border-yellow-200 bg-white/80 px-3 py-2 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-primary/60 focus:border-primary resize-none"
+                    placeholder="Mô tả ngắn gọn nhu cầu, quy mô và thời gian dự kiến triển khai..."
+                  ></textarea>
+                </div>
+                <button
+                  type="submit"
+                  class="w-full inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-primary to-secondary text-white px-5 py-2.5 text-sm font-semibold shadow-soft hover:shadow-lg hover:brightness-105 transition-all"
+                >
+                  Gửi yêu cầu
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-4 w-4"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
                   >
-                    Gửi thông tin (demo)
-                  </button>
-                  <p class="text-[11px] text-gray-500">
-                    Khi triển khai thực tế, nút này sẽ được kết nối với hệ
-                    thống nhận form (email, CRM hoặc backend riêng).
-                  </p>
-                </form>
-              </div>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" d="M5 12h14M12 5l7 7-7 7" />
+                  </svg>
+                </button>
+                <p class="text-[11px] text-slate-500 text-center">
+                  Bằng việc gửi thông tin, bạn đồng ý cho phép chúng tôi liên hệ để tư vấn chi tiết
+                  hơn về giải pháp phù hợp.
+                </p>
+              </form>
             </div>
           </div>
-        </section>
-      </main>
-
-      <!-- Footer -->
-      <footer class="bg-dark text-yellow-100 text-xs">
-        <div
-          class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2"
-        >
-          <p>
-            ©
-            <span id="year"></span>
-            CÔNG TY TNHH PHƯƠNG HỒNG PHÁT KIÊN GIANG. Mọi quyền được bảo lưu.
-          </p>
-          <p class="text-[11px] text-yellow-200">
-            Mã số doanh nghiệp: 1702250235 – Ngày hoạt động: 11/03/2022
-          </p>
         </div>
-      </footer>
-    </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-yellow-100 bg-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 py-5 text-[11px] sm:text-xs text-slate-500 flex flex-col sm:flex-row gap-2 sm:items-center sm:justify-between">
+        <p>
+          ©
+          <span id="year"></span>
+          CÔNG TY TNHH MTV ĐẦU TƯ XÂY LẮP TRƯỜNG GIANG. All rights reserved.
+        </p>
+        <p>
+          Địa chỉ: Số 23, TT 12 Khu đô thị mới Văn Phú, Phường Kiến Hưng, Hà Đông, Hà Nội.
+        </p>
+      </div>
+    </footer>
 
     <script>
-      // Set current year in footer
-      document.getElementById("year").textContent =
-        new Date().getFullYear().toString();
+      // Update year
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      // Mobile menu toggle
+      const toggle = document.getElementById("menu-toggle");
+      const mobileMenu = document.getElementById("mobile-menu");
+      if (toggle && mobileMenu) {
+        toggle.addEventListener("click", () => {
+          const isOpen = mobileMenu.style.maxHeight && mobileMenu.style.maxHeight !== "0px";
+          mobileMenu.style.maxHeight = isOpen ? "0px" : mobileMenu.scrollHeight + "px";
+        });
+      }
     </script>
   </body>
 </html>
